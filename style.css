@@ -118,6 +118,20 @@ body {
   fill: currentColor;
 }
 
+.topbar__links i[data-lucide] {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  transition: transform 0.2s ease, stroke-width 0.2s ease, filter 0.2s ease;
+}
+
+.topbar__links a:hover i[data-lucide] {
+  stroke-width: 2;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(0, 255, 159, 0.6));
+}
+
 .terminal-shell {
   display: grid;
   grid-template-columns: 1.6fr 0.8fr;
