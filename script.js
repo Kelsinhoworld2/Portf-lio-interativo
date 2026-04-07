@@ -10,19 +10,9 @@ const commands = {
     description: 'Lista de comandos disponíveis',
     response: [
       "help - mostrar esta lista de comandos",
-      "projetos - ver projetos recentes",
       "sobre - conhecer Kelson Varela",
       "contacto - informações para contato",
       "clear - limpar o terminal"
-    ]
-  },
-  projetos: {
-    description: 'Mostra projetos selecionados',
-    response: [
-      "1) Portfólio Interativo - site com Matrix rain, terminal e comandos intuitivos",
-      "2) Dashboard de dados - interface em tempo real e visual hacker",
-      "3) App Mobile - experiência futurista com animações e UX acessível",
-      "\nUse 'ver site1' para mais detalhes sobre o projeto 1"
     ]
   },
   sobre: {
@@ -168,7 +158,7 @@ function handleCommand(rawValue) {
   }
   history.push(value);
   historyPosition = history.length;
-  appendTerminalLine(`guest@kelson:~$ ${value}`);
+  appendTerminalLine(`Convidado: ${value}`);
   terminalInput.value = '';
   updateAutoComplete('');
 
